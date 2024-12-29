@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Concepts in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            font-size: 18px;
+        }
+        header {
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #004085;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            transition: transform 0.2s ease-in-out;
+        }
+        section:hover {
+            transform: scale(1.02);
+        }
+        h2 {
+            color: #007bff;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        h2:hover {
+            color: #0056b3;
+            transform: translateX(10px);
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 18px;
+            border-left: 5px solid #007bff;
+        }
+        pre:hover {
+            background: #eef6ff;
+        }
+        button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #output {
+            background: #e9ecef;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            min-height: 20px;
+            font-size: 18px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #007bff;
+            color: #fff;
+            border-top: 3px solid #004085;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Paper Summary</h1>
+        <h2>A Novel CPU Scheduling Algorithm</h2>
+
+        <h2>Introduction</h2>
+        <p>The paper focuses on introducing a new CPU scheduling algorithm that operates as both preemptive and non-preemptive based on arrival time. The algorithm aims to improve CPU efficiency in multitasking operating systems and is compared with traditional scheduling algorithms like FCFS, SJF, Round Robin, and Priority.</p>
+
+        <h2>Evaluation Criteria</h2>
+        <ul>
+            <li><strong>CPU Utilization:</strong> Measures the percentage of time the CPU is active.</li>
+            <li><strong>Throughput:</strong> The number of processes completed per time unit.</li>
+            <li><strong>Waiting Time:</strong> Average time a process waits before execution.</li>
+            <li><strong>Turnaround Time:</strong> Total time from process submission to completion.</li>
+            <li><strong>Response Time:</strong> Time taken from request submission to first response.</li>
+            <li><strong>Fairness:</strong> Ensures equal opportunities for all processes.</li>
+        </ul>
+
+        <h2>Traditional Algorithms</h2>
+        <ul>
+            <li><strong>FCFS:</strong> Processes are scheduled in the order they arrive. Simple but suffers from long wait times for large processes.</li>
+            <li><strong>SJF:</strong> Prioritizes processes with the shortest execution time but may cause starvation of longer processes.</li>
+            <li><strong>Priority:</strong> Allocates CPU based on process priority, potentially ignoring lower-priority processes.</li>
+            <li><strong>Round Robin:</strong> Allocates CPU time equally among processes using a time quantum.</li>
+        </ul>
+
+        <h2>Proposed Algorithm</h2>
+        <p>The proposed algorithm introduces a <strong>Condition Factor (CF)</strong>, calculated as the sum of burst time and arrival time. Processes are prioritized based on ascending CF, and the algorithm can operate as preemptive or non-preemptive.</p>
+        <p><strong>Advantages:</strong> Reduces waiting time, turnaround time, and response time while improving CPU utilization and throughput.</p>
+
+        <h2>Simulation Design</h2>
+        <p>The simulation uses an interactive GUI built with Java Swing, allowing users to input process data and compare scheduling algorithms.</p>
+
+        <h2>Results and Comparison</h2>
+        <p>The proposed algorithm outperforms FCFS, Priority, and Round Robin algorithms and delivers similar performance to SJF.</p>
+
+        <h2>Conclusion</h2>
+        <p>The paper demonstrates an efficient CPU scheduling algorithm that balances waiting time and throughput, proving its effectiveness through simulation and comparison with traditional methods.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CPU Scheduling Summary. All rights reserved.</p>
+    </footer>
+
+    <!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملخص الورقة - خوارزمية جدولة وحدة المعالجة المركزية الجديدة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            direction: rtl;
+            text-align: right;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        h2 {
+            color: #4CAF50;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ul {
+            margin: 10px 0;
+            padding-right: 20px;
+        }
+        ul li {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ملخص الورقة</h1>
+        <h2>خوارزمية جدولة وحدة المعالجة المركزية الجديدة</h2>
+
+        <h2>المقدمة</h2>
+        <p>تركز الورقة على تقديم خوارزمية جديدة لجدولة وحدة المعالجة المركزية تعمل كلاً من خوارزمية استباقية وغير استباقية بناءً على وقت الوصول. تهدف الخوارزمية إلى تحسين كفاءة وحدة المعالجة المركزية في أنظمة التشغيل متعددة المهام وتمت مقارنتها مع الخوارزميات التقليدية مثل FCFS، SJF، Round Robin، وPriority.</p>
+
+        <h2>معايير التقييم</h2>
+        <ul>
+            <li><strong>استخدام وحدة المعالجة المركزية:</strong> قياس النسبة المئوية للوقت الذي تكون فيه وحدة المعالجة المركزية نشطة.</li>
+            <li><strong>الإنتاجية:</strong> عدد العمليات المكتملة في وحدة زمنية.</li>
+            <li><strong>زمن الانتظار:</strong> متوسط الوقت الذي تنتظره العملية قبل التنفيذ.</li>
+            <li><strong>زمن الإتمام:</strong> الوقت الإجمالي من تقديم العملية وحتى اكتمالها.</li>
+            <li><strong>زمن الاستجابة:</strong> الوقت المستغرق من تقديم الطلب وحتى أول استجابة.</li>
+            <li><strong>العدالة:</strong> ضمان إعطاء الفرص بالتساوي لجميع العمليات.</li>
+        </ul>
+
+        <h2>الخوارزميات التقليدية</h2>
+        <ul>
+            <li><strong>FCFS:</strong> تُجدول العمليات حسب ترتيب وصولها. بسيطة لكنها تعاني من أوقات انتظار طويلة للعمليات الكبيرة.</li>
+            <li><strong>SJF:</strong> تُعطي الأولوية للعمليات ذات وقت التنفيذ الأقصر لكنها قد تتسبب في تجويع العمليات الأطول.</li>
+            <li><strong>Priority:</strong> تُخصص وحدة المعالجة المركزية بناءً على أولوية العملية، مما قد يُهمل العمليات ذات الأولوية الأقل.</li>
+            <li><strong>Round Robin:</strong> تُخصص وقت وحدة المعالجة المركزية بالتساوي بين العمليات باستخدام "زمن الكوانتوم".</li>
+        </ul>
+
+        <h2>الخوارزمية المقترحة</h2>
+        <p>تُقدم الخوارزمية عاملًا جديدًا يسمى <strong>عامل الشرط (CF)</strong>، يتم حسابه كمجموع وقت التنفيذ ووقت الوصول. تُعطى الأولوية للعمليات بناءً على ترتيب تصاعدي لعامل الشرط، وتعمل الخوارزمية كاستباقية أو غير استباقية.</p>
+        <p><strong>المزايا:</strong> تقلل زمن الانتظار وزمن الإتمام وزمن الاستجابة مع تحسين استخدام وحدة المعالجة المركزية والإنتاجية.</p>
+
+        <h2>تصميم المحاكاة</h2>
+        <p>تستخدم المحاكاة واجهة مستخدم تفاعلية مبنية باستخدام Java Swing، مما يتيح للمستخدمين إدخال بيانات العمليات ومقارنة الخوارزميات المختلفة.</p>
+
+        <h2>النتائج والمقارنة</h2>
+        <p>تفوقت الخوارزمية المقترحة على خوارزميات FCFS، Priority، وRound Robin، وحققت أداءً مشابهًا لخوارزمية SJF.</p>
+
+        <h2>الخاتمة</h2>
+        <p>تُظهر الورقة خوارزمية فعّالة لجدولة وحدة المعالجة المركزية تحقق توازنًا بين زمن الانتظار والإنتاجية، مما يثبت فعاليتها من خلال المحاكاة والمقارنة مع الأساليب التقليدية.</p>
+    </div>
+
+    <footer>
+        <p>&copy;
+            "Abdullrahman Ali" 2024 ملخص خوارزميات الجدولة. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>
+
+
+</body>
+</html>
+
+
+</body>
+</html>
